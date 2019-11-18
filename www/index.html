@@ -51,15 +51,15 @@
 .then(function(uTdata){
 return uTdata.delete();
 })
-.then(function(results){
-$("#display").removeClass();
-$("#display").addClass("bg-success");
-$("#display").html("delete success");
+    .then(function(results){
+     $("#display").removeClass();
+     $("#display").addClass("bg-success");
+     $("#display").html("delete success");
 })
-.catch(function(error){
-$("#display").removeClass();
-$("#display").addClass("bg-warning");
-$("#display").html("delete fail:" + JSON.stringify(error));
+     .catch(function(error){
+      $("#display").removeClass();
+      $("#display").addClass("bg-warning");
+      $("#display").html("delete fail:" + JSON.stringify(error));
 })
 
     }
@@ -70,28 +70,28 @@ var value = parseInt($("#update").val());
 uTdata.set(key, value);
 return uTdata.update();
 })
-.then(function(results){
-$("#display").removeClass();
-$("#display").addClass("bg-success");
-$("#display").html("update success");
+    .then(function(results){
+     $("#display").removeClass();
+     $("#display").addClass("bg-success");
+     $("#display").html("update success");
 })
 .catch(function(error){
-$("#display").removeClass();
-$("#display").addClass("bg-warning");
-$("#display").html("update fail:" + JSON.stringify(error));
+     $("#display").removeClass();
+     $("#display").addClass("bg-warning");
+     $("#display").html("update fail:" + JSON.stringify(error));
 })
     }
     function countData() {
       UTdata.count().fetchAll()
 .then(function(results){
-$("#display").removeClass();
-$("#display").addClass("bg-success");
-$("#display").html(results.count);
+     $("#display").removeClass();
+     $("#display").addClass("bg-success");
+     $("#display").html(results.count);
 })
 .catch(function(error){
-$("#display").removeClass();
-$("#display").addClass("bg-warning");
-$("#display").html("count fail:" + JSON.stringify(error));
+    $("#display").removeClass();
+    $("#display").addClass("bg-warning");
+    $("#display").html("count fail:" + JSON.stringify(error));
 })
     }
     function sortData() {
@@ -101,15 +101,15 @@ var msg="";
 for(var i=0; i<results.length; i++){
 msg += results[i].get(key) + "<br>";
 }
-$("#display").removeClass();
-$("#display").addClass("text-light");
-$("#display").addClass("bg-primary");
-$("#display").html(msg);
+    $("#display").removeClass();
+    $("#display").addClass("text-light");
+    $("#display").addClass("bg-primary");
+    $("#display").html(msg);
 })
 .catch(function(error){
-$("#display").removeClass();
-$("#display").addClass("bg-warning");
-$("#display").html("delete fail:" + JSON.stringify(error));
+    $("#display").removeClass();
+    $("#display").addClass("bg-warning");
+    $("#display").html("delete fail:" + JSON.stringify(error));
 })
     }
     </script>
